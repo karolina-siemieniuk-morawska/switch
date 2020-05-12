@@ -36,10 +36,11 @@ body:before {
 
 /* PAGE CONTENT */
 .container-fluid {
-  max-width: 1000px;
-  width: 900px;
+  max-width: 1300px;
+  min-width: 900px;
+  width: 50vw;
   margin-top: 8vh;
-  margin-right: 8vw;
+  margin-right: 12vw;
 }
 
 /* Navigation bar */
@@ -61,20 +62,21 @@ body:before {
 
 /* nav arrows */
 
-.fa-chevron-right,
-.fa-chevron-left {
+#navigation .fa-chevron-right,
+#navigation .fa-chevron-left {
   font-size: 18px;
   cursor: pointer;
   padding: 7px 15px;
 }
 
-.fa-chevron-left {
+#navigation .fa-chevron-left {
   color: #d3d3d3;
 }
 
-.fa-chevron-right {
+#navigation .fa-chevron-right {
   color: #717171;
 }
+
 /* nav buttons */
 #navigation > li {
   background: #d3d3d3;
@@ -105,14 +107,16 @@ section > * {
   color: white;
   margin-bottom: 30px;
   border-radius: 15px;
-  padding: 15px;
+  padding: 10px;
   height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .room-conditions {
   padding: 50px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -122,26 +126,19 @@ section > * {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
-.temperature h3:before {
+.temp {
   content: url("./assets/images/thermometer.png");
-  display: block;
-  position: absolute;
-  left: 70px;
 }
 
-.humidity h3:before {
+.humid {
   content: url("./assets/images/river.png");
-  display: block;
-  position: absolute;
-  left: 70px;
 }
 
 .room-conditions h3 {
   font-size: 36px !important;
-  min-width: 200px;
-  text-align: end;
 }
 
 .room-conditions span {
@@ -151,4 +148,146 @@ section > * {
 .room-conditions p {
   font-size: 16px !important;
   margin-bottom: 0 !important;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px 0 12px 0;
+}
+
+section figcaption {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 7px;
+}
+
+.lights {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.lights .fa-chevron-left {
+  color: #8e8e8e;
+  margin-right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.lights .fa-chevron-right {
+  color: #c5c5c5;
+  margin-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.lights span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.gray-1 {
+  background: #fff;
+}
+
+.gray-2 {
+  background: #e3e3e3;
+}
+
+.gray-3 {
+  background: #c6c6c6;
+}
+
+.gray-4 {
+  background: #aaaaaa;
+}
+
+.gray-5 {
+  background: #8d8d8d;
+}
+
+.green {
+  background: #71da80;
+}
+
+.turquoise {
+  background: #71dad4;
+}
+
+.blue {
+  background: #7187da;
+}
+
+.purple {
+  background: #a071da;
+}
+
+.pink {
+  background: #da71d1;
+}
+
+.coral {
+  background: #da7176;
+}
+
+.red {
+  background: #d64949;
+}
+
+.add-device {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d3d3d3;
+}
+
+.on,
+.off {
+  position: absolute;
+  right: 15px;
+  width: 52px;
+  background: #8d8d8d;
+  color: black;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 3px;
+}
+
+.on > p,
+.off > p {
+  margin-bottom: 0 !important;
+}
+
+.button > span {
+  width: 16px;
+  height: 16px;
+}
+
+.on > p {
+  order: 1;
+  padding-left: 3px;
+}
+
+.on-circle {
+  background: #71da80;
+  order: 2;
+}
+
+.off-circle {
+  background: #da7176;
+  order: 1;
+}
+
+.off > p {
+  order: 2;
+  padding-right: 2px;
 }

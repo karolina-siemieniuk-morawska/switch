@@ -58,13 +58,18 @@
           <!-- Room contitions box -->
           <section class="col-4">
             <div class="room-conditions">
+              <!-- Temperature -->
               <div class="temperature">
+                <span class="temp"></span>
                 <h3>
                   <span id="temperature">22</span> &deg;C
                   <p>current temp.</p>
                 </h3>
               </div>
+
+              <!-- Humidity -->
               <div class="humidity">
+                <span class="humid"></span>
                 <h3>
                   <span id="humidity">15</span> %
                   <p>air humidity</p>
@@ -75,17 +80,71 @@
 
           <!-- Halogeny -->
           <section class="col-4">
-            <div class="halogens">1</div>
+            <div class="halogens">
+              <div class="on button rounded-pill">
+                <p>ON</p>
+                <span class="rounded-circle on-circle"></span>
+              </div>
+
+              <!-- Lightbulb -->
+              <figure>
+                <img src="assets/images/lightbulb.png" alt="lightbulb" />
+                <figcaption>Halogeny</figcaption>
+              </figure>
+
+              <!-- Selct light color section -->
+              <div class="lights color">
+                <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
+                <span class="green"></span>
+                <span class="turquoise"></span>
+                <span class="blue"></span>
+                <span class="purple"></span>
+                <span class="pink"></span>
+                <span class="coral"></span>
+                <span class="red"></span>
+                <a class="arrow-right"><i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="lights grey">
+                <span class="gray-1"></span>
+                <span class="gray-2"></span>
+                <span class="gray-3"></span>
+                <span class="gray-4"></span>
+                <span class="gray-5"></span>
+              </div>
+            </div>
           </section>
 
           <!-- Sufit -->
           <section class="col-4">
-            <div class="celling">1</div>
+            <div class="celling">
+              <!-- ON / OFF buttons -->
+              <div class="off button rounded-pill">
+                <p>OFF</p>
+                <span class="rounded-circle off-circle"></span>
+              </div>
+
+              <!-- Lightbulb -->
+              <figure>
+                <img src="assets/images/lightbulb.png" alt="lightbulb" />
+                <figcaption>Sufit</figcaption>
+              </figure>
+
+              <!-- Selct light color section -->
+              <div class="lights grey">
+                <span class="gray-1"></span>
+                <span class="gray-2"></span>
+                <span class="gray-3"></span>
+                <span class="gray-4"></span>
+                <span class="gray-5"></span>
+              </div>
+            </div>
           </section>
 
           <!-- Add device -->
           <section class="col-4">
-            <div class="add-device-button">1</div>
+            <div class="add-device">
+              <a><img src="./assets/images/plus.png" /></a>
+            </div>
           </section>
         </div>
       </div>

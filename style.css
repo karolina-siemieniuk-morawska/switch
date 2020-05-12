@@ -1,0 +1,95 @@
+/* Font definitions */
+@font-face {
+  font-family: "latobold";
+  src: url("./assets/fonts/lato-bold-webfont.woff2") format("woff2"),
+    url("./assets/fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "latoregular";
+  src: url("./assets/fonts/lato-regular-webfont.woff2") format("woff2"),
+    url("./assets/fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General styles */
+body {
+  font-family: "latoregular";
+  font-size: 15px;
+}
+
+/* Page side image */
+body:before {
+  content: "";
+  background-image: url("./assets/images/side-image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+
+/* PAGE CONTENT */
+.container {
+  max-width: 1000px;
+  margin-top: 8vh;
+  margin-right: 8vw;
+}
+
+/* Navigation bar */
+.row-1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navigation {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0;
+}
+
+/* nav arrows */
+.fa-chevron-left {
+  color: #d3d3d3;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 7px 15px 7px 0;
+}
+
+.fa-chevron-right {
+  color: #717171;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 7px 0 7px 15px;
+}
+
+/* nav buttons */
+#navigation > li {
+  background: #d3d3d3;
+  text-transform: uppercase;
+  margin-right: 30px;
+  padding: 7px 0;
+  text-align: center;
+  color: #717171;
+  cursor: pointer;
+}
+
+#navigation > li:hover {
+  color: black;
+}
+
+#add-room-button {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 3px !important;
+  width: 36px;
+  margin-right: 0 !important;
+}

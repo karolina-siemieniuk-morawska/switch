@@ -25,6 +25,7 @@
   <body>
     <!-- Logo -->
     <a class="logo"><img src="./assets/images/logo-white.png" alt="logo" /></a>
+
     <div class="login-form">
       <!-- Avatar -->
       <img src="assets/images/avatar.png" alt="avatar" />
@@ -40,16 +41,14 @@
         <!-- Checkboxes -->
         <div class="checkboxes">
           <label
-            ><input type="checkbox" id="remember" name="remember" />
-            Remember me
+            ><input type="radio" id="remember" name="select" />
+            <p>Remember me</p>
+            <span class="checkmark"></span>
           </label>
           <label for="forgot-password">
-            <input
-              type="checkbox"
-              id="forgot-password"
-              name="forgot-password"
-            />
-            Forgot password
+            <input type="radio" id="forgot-password" name="select" />
+            <p>Forgot password</p>
+            <span class="checkmark"></span>
           </label>
         </div>
         <!-- Login button -->

@@ -20,50 +20,35 @@ body::before {
 
 body::after {
   content: url("../assets/images/house.png");
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
   display: block;
   position: fixed;
   z-index: -1;
   top: 0;
-  left: 100px;
+  left: 150px;
   display: flex;
   align-items: center;
   height: 100%;
 }
 
 .logo {
-  position: fixed;
-  top: 50px;
-  left: 100px;
+  position: absolute;
+  top: 8vh;
+  left: 177px;
   display: block;
 }
 
-.container {
-  height: 60vh;
-  position: relative;
-  max-width: 1600px !important;
-  display: flex;
-  align-items: center;
-}
-
-.row {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .login-form {
-  position: fixed;
-  left: 55%;
   width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  margin-left: 30vw;
 }
 
 .login-form img {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 form {
@@ -84,7 +69,7 @@ form {
   background: #ececec;
   padding: 10px 20px;
   font-size: 18px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .checkboxes {
@@ -93,7 +78,12 @@ form {
   align-items: center;
   justify-content: space-between;
   font-size: 17px;
-  font-weight: 100;
+  padding: 0 20px;
+}
+
+.checkboxes p {
+  margin-bottom: 0 !important;
+  margin-left: 25px;
 }
 
 button {
@@ -105,7 +95,7 @@ button {
   text-transform: uppercase;
   border: none;
   width: 60%;
-  margin: 30px 0;
+  margin: 25px 0;
 }
 
 .create-account {
@@ -119,4 +109,55 @@ button {
 
 .create-account a {
   color: #46c3e1;
+}
+
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Hide the browser's default checkbox */
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+label .checkmark:after {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

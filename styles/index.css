@@ -1,4 +1,4 @@
-/* Page side image */
+/* ---- Page background image ---- */
 body:before {
   content: "";
   background-image: url("../assets/images/side-image.png");
@@ -8,19 +8,19 @@ body:before {
   width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: -2;
 }
 
-/* PAGE CONTENT */
 .container-fluid {
   max-width: 1300px;
   min-width: 900px;
-  width: 50vw;
+  width: 45vw;
   margin-top: 8vh;
-  margin-right: 10vw;
+  margin-right: 15vw;
 }
 
-/* Navigation bar */
+/* ---- Navigation bar ----*/
 .row-1 {
   display: flex;
   justify-content: flex-end;
@@ -77,26 +77,28 @@ body:before {
   margin-right: 0 !important;
 }
 
-/* Dashboard */
+/* --- Dashboard --- */
 
 section {
   padding-right: 10px !important;
   padding-left: 10px !important;
 }
 
-section > * {
+/* boxes general styles */
+.box {
   background-color: #717171;
   color: white;
   margin-bottom: 25px;
   border-radius: 15px;
   padding: 10px;
-  min-height: 300px;
+  min-height: 285px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
+/* Room contidions - 1st box */
 .room-conditions {
   padding: 50px;
   justify-content: space-between;
@@ -111,11 +113,17 @@ section > * {
   width: 100%;
 }
 
-.temp {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles  */
+  .temperature {
+    margin-bottom: 40px;
+  }
+}
+.temp::before {
   content: url("../assets/images/thermometer.png");
 }
 
-.humid {
+.humid::before {
   content: url("../assets/images/river.png");
 }
 
@@ -132,6 +140,7 @@ section > * {
   margin-bottom: 0 !important;
 }
 
+/* Sufit - 2nd box */
 figure {
   display: flex;
   flex-direction: column;
@@ -194,6 +203,8 @@ section figcaption {
   background: #8d8d8d;
 }
 
+/* Halogeny - 3rd box */
+
 .green {
   background: #71da80;
 }
@@ -222,13 +233,22 @@ section figcaption {
   background: #d64949;
 }
 
+/* Add device - 4th box */
 .add-device {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
   background: #d3d3d3;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles  */
+  .add-device img {
+    margin-top: 120px;
+  }
+}
+
+/* ON / OFF buttons */
 .on,
 .off {
   position: absolute;

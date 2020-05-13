@@ -1,3 +1,4 @@
+/* General body styles */
 body {
   height: 100vh;
   display: flex;
@@ -5,7 +6,7 @@ body {
   justify-content: center;
 }
 
-/* Page side image */
+/* Page background images */
 body::before {
   content: "";
   background-image: url("../assets/images/side-shape.png");
@@ -15,6 +16,7 @@ body::before {
   width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: -2;
 }
 
@@ -32,6 +34,8 @@ body::after {
   height: 100%;
 }
 
+/* Logo */
+
 .logo {
   position: absolute;
   top: 8vh;
@@ -39,6 +43,7 @@ body::after {
   display: block;
 }
 
+/* Login section */
 .login-form {
   width: 350px;
   display: flex;
@@ -51,6 +56,7 @@ body::after {
   margin-bottom: 45px;
 }
 
+/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -72,6 +78,7 @@ form {
   margin-bottom: 30px;
 }
 
+/* Custom radio buttons */
 .checkboxes {
   width: 100%;
   display: flex;
@@ -86,6 +93,54 @@ form {
   margin-left: 25px;
 }
 
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* --hide default */
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* --custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/* --create checkmark */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border: 5px solid white;
+  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* --show when checked */
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Login button */
 button {
   background: #55e16f;
   border-radius: 10px;
@@ -98,6 +153,7 @@ button {
   margin: 25px 0;
 }
 
+/* Create account info */
 .create-account {
   text-align: center;
 }
@@ -109,55 +165,4 @@ button {
 
 .create-account a {
   color: #46c3e1;
-}
-
-label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0;
-}
-
-/* Hide the browser's default checkbox */
-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 3px;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-label input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-label .checkmark:after {
-  width: 18px;
-  height: 18px;
-  background-color: black;
-  border: 5px solid white;
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }

@@ -22,43 +22,54 @@
     <link rel="stylesheet" href="../styles/login.css" />
     <title>Login</title>
   </head>
-  <body>
-    <!-- Logo -->
-    <a class="logo" href="index.html"
-      ><img src="./assets/images/logo-white.png" alt="logo"
-    /></a>
+  <body
+    class="d-flex align-items-center justify-content-center position-relative"
+  >
+    <div class="container d-flex justify-content-between">
+      <!-- Logo -->
+      <a class="logo" href="index.html"
+        ><img class="logo" src="./assets/images/logo-white.png" alt="logo"
+      /></a>
 
-    <div class="login-form">
-      <!-- Avatar -->
-      <img src="assets/images/avatar.png" alt="avatar" />
+      <div
+        class="login d-flex flex-column align-items-center align-self-center"
+      >
+        <!-- Avatar -->
+        <img src="assets/images/avatar.png" alt="avatar" />
 
-      <!-- Form -->
-      <form action="" class="">
-        <input class="email" type="email" placeholder="EMAIL" />
+        <!-- Form -->
+        <form
+          action=""
+          class="d-flex flex-column align-items-center justify-content-between"
+        >
+          <input class="email" type="email" placeholder="EMAIL" name="email" />
 
-        <input class="password" type="password" />
+          <input class="password" type="password" name="password" />
 
-        <!-- Checkboxes -->
-        <div class="checkboxes">
-          <label
-            ><input type="radio" id="remember" name="select" />
-            <p>Remember me</p>
-            <span class="checkmark"></span>
-          </label>
-          <label for="forgot-password">
-            <input type="radio" id="forgot-password" name="select" />
-            <p>Forgot password</p>
-            <span class="checkmark"></span>
-          </label>
+          <!-- Checkboxes -->
+          <div
+            class="checkboxes d-flex align-items-center justify-content-between"
+          >
+            <label class="d-flex align-items-center"
+              ><input type="radio" id="remember" name="select" />
+              <p>Remember me</p>
+              <span class="checkmark"></span>
+            </label>
+            <label class="d-flex align-items-center">
+              <input type="radio" id="forgot-password" name="select" />
+              <p>Forgot password</p>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <!-- Login button -->
+          <button class="login-button text-center text-uppercase">Login</button>
+        </form>
+
+        <!-- Create account info -->
+        <div class="create-account text-center">
+          <p>Don't have an account yet?</p>
+          <p><a href="">Create an account</a></p>
         </div>
-        <!-- Login button -->
-        <button class="login-button">Login</button>
-      </form>
-
-      <!-- Create account info -->
-      <div class="create-account">
-        <p>Don't have an account yet?</p>
-        <p><a href="">Create an account</a></p>
       </div>
     </div>
     <a href="index.html" style="position: absolute; bottom: 50px; right: 50px;"

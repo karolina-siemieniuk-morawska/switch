@@ -3,8 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Switch</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <title>Login</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Logo -->
+    <a class="logo"><img src="./assets/images/logo-white.png" alt="logo" /></a>
+    <div class="login-form">
+      <!-- Avatar -->
+      <img src="assets/images/avatar.png" alt="avatar" />
+
+      <!-- Form -->
+      <form action="" class="">
+        <!-- Email -->
+        <input class="email" type="email" placeholder="EMAIL" />
+
+        <!-- Password -->
+        <input class="password" type="password" />
+
+        <!-- Checkboxes -->
+        <div class="checkboxes">
+          <label
+            ><input type="checkbox" id="remember" name="remember" />
+            Remember me
+          </label>
+          <label for="forgot-password">
+            <input
+              type="checkbox"
+              id="forgot-password"
+              name="forgot-password"
+            />
+            Forgot password
+          </label>
+        </div>
+        <!-- Login button -->
+        <button class="login-button">Login</button>
+      </form>
+
+      <!-- Create account info -->
+      <div class="create-account">
+        <p>Don't have an account yet?</p>
+        <p><a href="">Create an account</a></p>
+      </div>
+    </div>
+  </body>
 </html>

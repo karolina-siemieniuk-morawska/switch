@@ -1,35 +1,12 @@
-/* Font definitions */
-@font-face {
-  font-family: "latobold";
-  src: url("./assets/fonts/lato-bold-webfont.woff2") format("woff2"),
-    url("./assets/fonts/lato-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "latoregular";
-  src: url("./assets/fonts/lato-regular-webfont.woff2") format("woff2"),
-    url("./assets/fonts/lato-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* General styles */
-body {
-  font-family: "latoregular";
-  font-size: 15px;
-}
-
 /* Page side image */
 body:before {
   content: "";
-  background-image: url("./assets/images/side-image.png");
+  background-image: url("../assets/images/side-image.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: -2;
 }
@@ -40,7 +17,7 @@ body:before {
   min-width: 900px;
   width: 50vw;
   margin-top: 8vh;
-  margin-right: 12vw;
+  margin-right: 10vw;
 }
 
 /* Navigation bar */
@@ -102,13 +79,18 @@ body:before {
 
 /* Dashboard */
 
+section {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+
 section > * {
   background-color: #717171;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   border-radius: 15px;
   padding: 10px;
-  height: 270px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,11 +112,11 @@ section > * {
 }
 
 .temp {
-  content: url("./assets/images/thermometer.png");
+  content: url("../assets/images/thermometer.png");
 }
 
 .humid {
-  content: url("./assets/images/river.png");
+  content: url("../assets/images/river.png");
 }
 
 .room-conditions h3 {

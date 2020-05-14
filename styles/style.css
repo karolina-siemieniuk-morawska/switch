@@ -30,10 +30,3 @@ img {
 p {
   margin-bottom: 0 !important;
 }
-
-/* Logo */
-.logo {
-  max-width: 100%;
-  height: auto;
-  margin-top: 80px;
-}

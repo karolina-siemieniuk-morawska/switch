@@ -11,6 +11,13 @@ body {
   margin-right: 10%;
 }
 
+/* Logo */
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+
 /* ---- Navigation ----*/
 .navigation {
   width: 100%;

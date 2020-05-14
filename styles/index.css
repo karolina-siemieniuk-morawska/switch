@@ -7,7 +7,6 @@ body {
 .container {
   height: 100vh;
   max-width: 900px;
-  width: 50%;
   margin-right: 10%;
 }
 

@@ -10,7 +10,7 @@ body {
   margin-right: 10%;
 }
 
-/* ---- Navigation bar ----*/
+/* ---- Navigation ----*/
 .navigation {
   width: 100%;
   margin: 40px 0;
@@ -32,7 +32,6 @@ body {
   color: #717171;
 }
 
-/* nav buttons */
 .navigation > li {
   background: #d3d3d3;
   margin-right: 30px;
@@ -95,7 +94,6 @@ body {
 }
 
 .measurements-box span {
-  display: block;
   width: 100%;
   font-size: 40px;
 }
@@ -109,6 +107,7 @@ body {
 .thermometer {
   width: 30%;
 }
+
 .thermometer:before {
   content: url("../assets/images/thermometer.png");
 }
@@ -117,10 +116,9 @@ body {
   content: url("../assets/images/river.png");
 }
 
-/* Sufit - 2nd box */
+/* 2nd box - sufit */
 .lightbulb {
   margin-top: 15%;
-  max-width: 100%;
 }
 
 .box-title {
@@ -133,18 +131,19 @@ body {
   max-width: 100%;
 }
 
+.lights .fas {
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .lights .fa-chevron-left {
   color: #8e8e8e;
   margin-right: 5px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .lights .fa-chevron-right {
   color: #c5c5c5;
   margin-left: 5px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .lights span {
@@ -159,7 +158,6 @@ body {
 /* ON / OFF buttons */
 .on,
 .off {
-  position: absolute;
   top: 15px;
   right: 15px;
   width: 50px;

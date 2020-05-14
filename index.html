@@ -32,124 +32,151 @@
     <title>Switch</title>
   </head>
 
-  <body>
-    <div class="container-fluid">
+  <body
+    class="d-flex align-items-center justify-content-center position-relative"
+  >
+    <div class="container d-flex flex-column position-relative">
       <!-- Logo -->
-      <div class="row row-1">
-        <a id="logo" href="index.html"
-          ><img src="./assets/images/logo.png" alt="Company logo"
-        /></a>
-      </div>
+      <a class="d-flex" href="index.html"
+        ><img
+          class="logo ml-auto"
+          src="./assets/images/logo.png"
+          alt="Company logo"
+      /></a>
 
       <!-- Navigation bar -->
-      <nav class="row row-2">
-        <ul id="navigation">
+      <nav class="row">
+        <ul
+          class="navigation d-flex align-items-center justify-content-between text-center text-uppercase list-unstyled"
+        >
           <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
-          <li class="rounded-pill col">Room 1</li>
-          <li class="rounded-pill col">Kitchen</li>
-          <li class="rounded-pill col">Basement</li>
-          <li class="rounded-pill col">Garage</li>
-          <li id="add-room-button" class="rounded-circle">+</li>
+          <li class="rounded-pill col"><a>Room 1</a></li>
+          <li class="rounded-pill col"><a>Kitchen</a></li>
+          <li class="rounded-pill col"><a>Basement</a></li>
+          <li class="rounded-pill col"><a>Garage</a></li>
+          <li id="add-room" class="rounded-circle add-room">
+            <a><i class="fas fa-plus"></i></a>
+          </li>
           <a class="arrow-right"><i class="fas fa-chevron-right"></i></a>
         </ul>
       </nav>
 
       <!-- Dashboard  -->
-      <div id="dashboard">
-        <div class="row row-3">
-          <!-- Room contitions - 1st box -->
-          <section class="col-4">
-            <div class="room-conditions box">
-              <div class="temperature">
-                <span class="temp"></span>
-                <h3>
-                  <span id="temperature">22</span> &deg;C
+      <div class="dashboard row">
+        <!-- 1st box - room status -->
+        <div class="col-4">
+          <div id="box-1" class="box position-relative">
+            <div
+              class="box-content d-flex flex-column align-items-center justify-content-around"
+            >
+              <div
+                class="temperature measurements-box d-flex align-items-center justify-content-between"
+              >
+                <div class="thermometer" aria-hidden="true"></div>
+                <div class="data">
+                  <span id="temperature">22 &deg;C</span>
                   <p>current temp.</p>
-                </h3>
+                </div>
               </div>
-
-              <div class="humidity">
-                <span class="humid"></span>
-                <h3>
-                  <span id="humidity">15</span> %
+              <div
+                class="humidity measurements-box d-flex align-items-center justify-content-between"
+              >
+                <div class="river" aria-hidden="true"></div>
+                <div class="data">
+                  <span id="humidity">15 %</span>
                   <p>air humidity</p>
-                </h3>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
 
-          <!-- Halogeny - 2nd box -->
-          <section class="col-4">
-            <div class="halogens box">
-              <!-- ON / OFF button -->
-              <div class="on button rounded-pill">
-                <p>ON</p>
-                <span class="rounded-circle on-circle"></span>
-              </div>
+        <!-- 2nd box - sufit -->
+        <div class="col-4">
+          <div id="box-2" class="box position-relative">
+            <!-- ON / OFF button -->
+            <a
+              class="on button rounded-pill d-flex align-items-center justify-content-between"
+            >
+              <div class="rounded-circle on-off-control"></div>
+              <p>ON</p>
+            </a>
+            <div class="box-content d-flex flex-column align-items-center">
+              <img
+                class="lightbulb"
+                src="assets/images/lightbulb.png"
+                alt="lightbulb"
+                aria-hidden="true"
+              />
+              <p class="text-uppercase box-title">Halogeny</p>
 
-              <figure>
-                <img src="assets/images/lightbulb.png" alt="lightbulb" />
-                <figcaption>Halogeny</figcaption>
-              </figure>
-
-              <!-- select light color -->
-              <div class="lights color">
+              <div class="lights d-flex align-items-center">
                 <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
-                <span class="green"></span>
-                <span class="turquoise"></span>
-                <span class="blue"></span>
-                <span class="purple"></span>
-                <span class="pink"></span>
-                <span class="coral"></span>
-                <span class="red"></span>
+                <span style="background: #71da80;"></span>
+                <span style="background: #71dad4;"></span>
+                <span style="background: #7187da;"></span>
+                <span style="background: #a071da;"></span>
+                <span style="background: #da71d1;"></span>
+                <span style="background: #da7176;"></span>
+                <span style="background: #d64949;"></span>
                 <a class="arrow-right"><i class="fas fa-chevron-right"></i></a>
               </div>
 
-              <!-- select light intensity -->
-              <div class="lights grey">
-                <span class="gray-1"></span>
-                <span class="gray-2"></span>
-                <span class="gray-3"></span>
-                <span class="gray-4"></span>
-                <span class="gray-5"></span>
+              <div class="lights d-flex align-items-center">
+                <span style="background: #fff;"></span>
+                <span style="background: #e3e3e3;"></span>
+                <span style="background: #c6c6c6;"></span>
+                <span style="background: #aaaaaa;"></span>
+                <span style="background: #8d8d8d;"></span>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
 
-          <!-- Sufit - 3rd box -->
-          <section class="col-4">
-            <div class="celling box">
-              <!-- ON / OFF button -->
-              <div class="off button rounded-pill">
-                <p>OFF</p>
-                <span class="rounded-circle off-circle"></span>
-              </div>
+        <!-- 3rd box - halogeny -->
+        <div class="col-4">
+          <div id="box-3" class="box position-relative halogeny">
+            <!-- ON / OFF button -->
+            <a
+              class="off button rounded-pill d-flex align-items-center justify-content-between"
+            >
+              <div class="rounded-circle on-off-control"></div>
+              <p>OFF</p>
+            </a>
 
-              <figure>
-                <img src="assets/images/lightbulb.png" alt="lightbulb" />
-                <figcaption>Sufit</figcaption>
-              </figure>
+            <div class="box-content d-flex flex-column align-items-center">
+              <img
+                class="lightbulb"
+                src="assets/images/lightbulb.png"
+                alt="lightbulb"
+                aria-hidden="true"
+              />
+              <p class="text-uppercase box-title">Sufit</p>
 
-              <!-- select light intensity  -->
-              <div class="lights grey">
-                <span class="gray-1"></span>
-                <span class="gray-2"></span>
-                <span class="gray-3"></span>
-                <span class="gray-4"></span>
-                <span class="gray-5"></span>
+              <div class="lights">
+                <span style="background: #fff;"></span>
+                <span style="background: #e3e3e3;"></span>
+                <span style="background: #c6c6c6;"></span>
+                <span style="background: #aaaaaa;"></span>
+                <span style="background: #8d8d8d;"></span>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
 
-          <!-- Add device - 4th box -->
-          <section class="col-4">
-            <div class="add-device box">
+        <!-- 4th box - add device -->
+        <div class="col-4">
+          <div id="box-4" class="box position-relative add-device">
+            <div
+              class="box-content d-flex flex-column align-items-center justify-content-center"
+            >
               <a><img src="./assets/images/plus.png" /></a>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </div>
+
     <a href="login.html" style="position: absolute; bottom: 50px; right: 50px;"
       >Przejdź do logowania..</a
     >

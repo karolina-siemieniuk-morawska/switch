@@ -20,3 +20,20 @@ body {
   font-family: "latoregular";
   font-size: 15px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+/* Logo */
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-top: 80px;
+}

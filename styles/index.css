@@ -1,163 +1,136 @@
 /* ---- Page background image ---- */
-body:before {
-  content: "";
-  background-image: url("../assets/images/side-image.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+body {
+  background: url("../assets/images/side-image.png") left/contain no-repeat;
   z-index: -2;
 }
 
-.container-fluid {
-  max-width: 1300px;
-  min-width: 900px;
-  width: 45vw;
-  margin-top: 8vh;
-  margin-right: 15vw;
+.container {
+  height: 100vh;
+  max-width: 900px;
+  margin-right: 10%;
 }
 
 /* ---- Navigation bar ----*/
-.row-1 {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 15px;
-}
-
-#navigation {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navigation {
   width: 100%;
   margin: 40px 0;
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 
-/* nav arrows */
-
-#navigation .fa-chevron-right,
-#navigation .fa-chevron-left {
+.navigation .fa-chevron-right,
+.navigation .fa-chevron-left {
   font-size: 18px;
   cursor: pointer;
   padding: 7px 15px;
 }
 
-#navigation .fa-chevron-left {
+.navigation .fa-chevron-left {
   color: #d3d3d3;
 }
 
-#navigation .fa-chevron-right {
+.navigation .fa-chevron-right {
   color: #717171;
 }
 
 /* nav buttons */
-#navigation > li {
+.navigation > li {
   background: #d3d3d3;
-  text-transform: uppercase;
   margin-right: 30px;
   padding: 7px 0;
-  text-align: center;
   color: #717171;
   cursor: pointer;
 }
 
-#navigation > li:hover {
+.navigation > li:hover {
   color: black;
 }
 
-#add-room-button {
-  font-weight: bold;
-  font-size: 20px;
-  padding: 3px !important;
-  width: 36px;
+.add-room {
   margin-right: 0 !important;
 }
 
-/* --- Dashboard --- */
-
-section {
-  padding-right: 10px !important;
-  padding-left: 10px !important;
+.add-room i {
+  padding: 0 11px;
+  color: gray;
 }
 
-/* boxes general styles */
+/* --- Dashboard --- */
 .box {
   background-color: #717171;
-  color: white;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   border-radius: 15px;
-  padding: 10px;
-  min-height: 285px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
 }
 
-/* Room contidions - 1st box */
-.room-conditions {
-  padding: 50px;
-  justify-content: space-between;
-  align-items: flex-end;
+/* for responsive squares */
+.box:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
-.temperature,
-.humidity {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.box-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+/* last box - lighter shade */
+.col-4:last-of-type > .box {
+  background: #d3d3d3;
+}
+
+/* 1st box - room status */
+#box-1 > * {
+  padding: 40px;
+}
+
+.measurements-box {
   width: 100%;
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles  */
-  .temperature {
-    margin-bottom: 40px;
-  }
+.data {
+  width: 70%;
+  margin-left: 30px;
 }
-.temp::before {
+
+.measurements-box span {
+  display: block;
+  width: 100%;
+  font-size: 40px;
+}
+
+.measurements-box p {
+  font-size: 18px;
+  margin-top: -15px;
+}
+
+.river,
+.thermometer {
+  width: 30%;
+}
+.thermometer:before {
   content: url("../assets/images/thermometer.png");
 }
 
-.humid::before {
+.river:before {
   content: url("../assets/images/river.png");
 }
 
-.room-conditions h3 {
-  font-size: 36px !important;
-}
-
-.room-conditions span {
-  padding-right: 10px;
-}
-
-.room-conditions p {
-  font-size: 16px !important;
-  margin-bottom: 0 !important;
-}
-
 /* Sufit - 2nd box */
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 35px 0 12px 0;
+.lightbulb {
+  margin-top: 15%;
+  max-width: 100%;
 }
 
-section figcaption {
-  text-transform: uppercase;
+.box-title {
   font-size: 18px;
-  padding: 7px;
+  padding: 7px 0 20px 0;
 }
 
 .lights {
-  display: flex;
-  align-items: center;
   margin-bottom: 7px;
+  max-width: 100%;
 }
 
 .lights .fa-chevron-left {
@@ -176,120 +149,51 @@ section figcaption {
 
 .lights span {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   border-radius: 100%;
   margin: 3px;
   cursor: pointer;
-}
-
-.gray-1 {
-  background: #fff;
-}
-
-.gray-2 {
-  background: #e3e3e3;
-}
-
-.gray-3 {
-  background: #c6c6c6;
-}
-
-.gray-4 {
-  background: #aaaaaa;
-}
-
-.gray-5 {
-  background: #8d8d8d;
-}
-
-/* Halogeny - 3rd box */
-
-.green {
-  background: #71da80;
-}
-
-.turquoise {
-  background: #71dad4;
-}
-
-.blue {
-  background: #7187da;
-}
-
-.purple {
-  background: #a071da;
-}
-
-.pink {
-  background: #da71d1;
-}
-
-.coral {
-  background: #da7176;
-}
-
-.red {
-  background: #d64949;
-}
-
-/* Add device - 4th box */
-.add-device {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: #d3d3d3;
-}
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles  */
-  .add-device img {
-    margin-top: 120px;
-  }
 }
 
 /* ON / OFF buttons */
 .on,
 .off {
   position: absolute;
+  top: 15px;
   right: 15px;
-  width: 52px;
+  width: 50px;
   background: #8d8d8d;
   color: black;
-  font-size: 11px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 12px;
   padding: 1px 3px;
+  z-index: 2;
+  cursor: pointer;
 }
 
-.on > p,
-.off > p {
-  margin-bottom: 0 !important;
+.on p,
+.off p {
+  padding: 0 3px;
 }
 
-.button > span {
+.on-off-control {
   width: 16px;
   height: 16px;
 }
 
-.on > p {
-  order: 1;
-  padding-left: 3px;
-}
-
-.on-circle {
-  background: #71da80;
+.on .on-off-control {
+  background-color: #71da80;
   order: 2;
 }
 
-.off-circle {
-  background: #da7176;
-  order: 1;
+.off .on-off-control {
+  background-color: #da7171;
 }
 
-.off > p {
-  order: 2;
-  padding-right: 2px;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles  */
+  .container {
+    margin-left: 750px;
+    margin-right: 0;
+  }
 }

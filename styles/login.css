@@ -1,0 +1,149 @@
+/* Page background images */
+.wrapper {
+  background: white url("../assets/images/login-side-image.png") left/contain
+    no-repeat;
+  z-index: -2;
+  height: 100vh;
+}
+
+.container {
+  height: 80vh;
+  max-width: 1400px;
+  width: 70vw;
+  margin-left: 10%;
+}
+
+.logo {
+  margin-top: -20px;
+}
+
+/* Login section */
+.login {
+  max-width: 400px;
+}
+
+.login img {
+  margin-bottom: 45px;
+}
+
+.email,
+.password {
+  width: 100%;
+  border: none;
+  border-radius: 17px;
+  background: #ececec;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Custom radio buttons */
+.checkboxes {
+  font-size: 17px;
+}
+
+.checkboxes p {
+  margin-bottom: 0;
+  margin-left: 25px;
+}
+
+label {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* --hide default */
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* --custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+/* --create checkmark */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 5px solid white;
+  margin: auto;
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* --show when checked */
+label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Login button */
+button {
+  background: #55e16f;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  border: none;
+  width: 60%;
+  margin: 25px 0;
+}
+
+/* Create account info */
+.create-account p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.create-account a {
+  color: #46c3e1;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    transform: scale(0.75);
+    margin-left: -20px;
+  }
+
+  .email,
+  .password {
+    max-width: 250px;
+    font-size: 14px;
+  }
+
+  .login img {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .checkboxes {
+    font-size: 14px;
+  }
+
+  .checkboxes p {
+    margin-top: 3px;
+  }
+
+  button {
+    padding: 5px;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  .create-account p {
+    font-size: 14px;
+  }
+}

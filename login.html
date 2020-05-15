@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontawesome icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-center justify-content-center">
+      <div class="container d-flex justify-content-between">
+        <!-- Logo -->
+        <a href="index.html">
+          <img class="logo" src="./assets/images/logo-white.png" alt="logo" />
+        </a>
+
+        <div
+          class="login d-flex flex-column align-items-center align-self-center"
+        >
+          <!-- Avatar -->
+          <img src="assets/images/avatar.png" alt="avatar" />
+
+          <!-- Form -->
+          <form
+            action=""
+            class="d-flex flex-column align-items-center justify-content-between"
+          >
+            <input
+              class="email"
+              type="email"
+              placeholder="EMAIL"
+              name="email"
+            />
+
+            <input class="password" type="password" name="password" />
+
+            <!-- Checkboxes -->
+            <div
+              class="checkboxes d-flex align-items-center justify-content-between"
+            >
+              <label class="d-flex align-items-center"
+                ><input type="radio" id="remember" name="select" />
+                <p>Remember me</p>
+                <span class="checkmark"></span>
+              </label>
+              <label class="d-flex align-items-center">
+                <input type="radio" id="forgot-password" name="select" />
+                <p>Forgot password</p>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <!-- Login button -->
+            <button class="login-button text-center text-uppercase">
+              Login
+            </button>
+          </form>
+
+          <!-- Create account info -->
+          <div class="create-account text-center">
+            <p>Don't have an account yet?</p>
+            <p><a href="">Create an account</a></p>
+          </div>
+        </div>
+      </div>
+      <a
+        href="index.html"
+        style="position: absolute; bottom: 50px; right: 50px;"
+        >Przejdź do strony głównej..</a
+      >
+    </div>
+  </body>
+</html>

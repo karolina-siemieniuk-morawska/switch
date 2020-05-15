@@ -1,5 +1,5 @@
 /* Page background images */
-body {
+.wrapper {
   background: white url("../assets/images/login-side-image.png") left/contain
     no-repeat;
   z-index: -2;
@@ -109,4 +109,41 @@ button {
 
 .create-account a {
   color: #46c3e1;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    transform: scale(0.75);
+    margin-left: -20px;
+  }
+
+  .email,
+  .password {
+    max-width: 250px;
+    font-size: 14px;
+  }
+
+  .login img {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .checkboxes {
+    font-size: 14px;
+  }
+
+  .checkboxes p {
+    margin-top: 3px;
+  }
+
+  button {
+    padding: 5px;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  .create-account p {
+    font-size: 14px;
+  }
 }

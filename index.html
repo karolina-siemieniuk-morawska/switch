@@ -32,151 +32,157 @@
     <title>Switch</title>
   </head>
 
-  <body class="d-flex align-items-center justify-content-end position-relative">
-    <div class="container d-flex flex-column position-relative">
-      <!-- Logo -->
-      <a class="d-flex" href="index.html"
-        ><img
-          class="logo ml-auto"
-          src="./assets/images/logo.png"
-          alt="Company logo"
-      /></a>
+  <body>
+    <div class="wrapper d-flex align-items-center justify-content-end">
+      <div class="container d-flex flex-column position-relative">
+        <!-- Logo -->
+        <a class="d-flex" href="index.html"
+          ><img
+            class="logo ml-auto"
+            src="./assets/images/logo.png"
+            alt="Company logo"
+        /></a>
 
-      <!-- Navigation bar -->
-      <nav class="row">
-        <ul
-          class="navigation d-flex align-items-center justify-content-between text-center text-uppercase list-unstyled"
-        >
-          <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
-          <li class="rounded-pill col"><a>Room 1</a></li>
-          <li class="rounded-pill col"><a>Kitchen</a></li>
-          <li class="rounded-pill col"><a>Basement</a></li>
-          <li class="rounded-pill col"><a>Garage</a></li>
-          <li id="add-room" class="rounded-circle add-room">
-            <a><i class="fas fa-plus"></i></a>
-          </li>
-          <a class="arrow-right"><i class="fas fa-chevron-right"></i></a>
-        </ul>
-      </nav>
+        <!-- Navigation bar -->
+        <nav class="row">
+          <ul
+            class="navigation d-flex align-items-center justify-content-between text-center text-uppercase list-unstyled"
+          >
+            <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
+            <li class="rounded-pill col"><a>Room 1</a></li>
+            <li class="rounded-pill col"><a>Kitchen</a></li>
+            <li class="rounded-pill col"><a>Basement</a></li>
+            <li class="rounded-pill col"><a>Garage</a></li>
+            <li id="add-room" class="rounded-circle add-room">
+              <a><i class="fas fa-plus"></i></a>
+            </li>
+            <a class="arrow-right"><i class="fas fa-chevron-right"></i></a>
+          </ul>
+        </nav>
 
-      <!-- Dashboard  -->
-      <div class="dashboard row">
-        <!-- 1st box - room status -->
-        <div class="col-4">
-          <div id="box-1" class="box position-relative">
-            <div
-              class="box-content d-flex flex-column align-items-center justify-content-around"
-            >
+        <!-- Dashboard  -->
+        <div class="dashboard row">
+          <!-- 1st box - room status -->
+          <div class="col-4">
+            <div id="box-1" class="box position-relative">
               <div
-                class="temperature measurements-box d-flex align-items-center justify-content-between"
+                class="box-content d-flex flex-column align-items-center justify-content-around"
               >
-                <div class="thermometer" aria-hidden="true"></div>
-                <div class="data">
-                  <span id="temperature" class="d-block">22 &deg;C</span>
-                  <p>current temp.</p>
+                <div
+                  class="temperature measurements-box d-flex align-items-center justify-content-between"
+                >
+                  <div class="thermometer" aria-hidden="true"></div>
+                  <div class="data">
+                    <span id="temperature" class="d-block">22 &deg;C</span>
+                    <p>current temp.</p>
+                  </div>
+                </div>
+                <div
+                  class="humidity measurements-box d-flex align-items-center justify-content-between"
+                >
+                  <div class="river" aria-hidden="true"></div>
+                  <div class="data">
+                    <span id="humidity" class="d-block">15 %</span>
+                    <p>air humidity</p>
+                  </div>
                 </div>
               </div>
-              <div
-                class="humidity measurements-box d-flex align-items-center justify-content-between"
+            </div>
+          </div>
+
+          <!-- 2nd box - sufit -->
+          <div class="col-4">
+            <div id="box-2" class="box position-relative">
+              <!-- ON / OFF button -->
+              <a
+                class="on button rounded-pill d-flex align-items-center justify-content-between position-absolute"
               >
-                <div class="river" aria-hidden="true"></div>
-                <div class="data">
-                  <span id="humidity" class="d-block">15 %</span>
-                  <p>air humidity</p>
+                <div class="rounded-circle on-off-control"></div>
+                <p>ON</p>
+              </a>
+              <div class="box-content d-flex flex-column align-items-center">
+                <img
+                  class="lightbulb"
+                  src="assets/images/lightbulb.png"
+                  alt="lightbulb"
+                  aria-hidden="true"
+                />
+                <p class="text-uppercase box-title">Halogeny</p>
+
+                <div class="lights d-flex align-items-center">
+                  <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
+                  <span style="background: #71da80;"></span>
+                  <span style="background: #71dad4;"></span>
+                  <span style="background: #7187da;"></span>
+                  <span style="background: #a071da;"></span>
+                  <span style="background: #da71d1;"></span>
+                  <span style="background: #da7176;"></span>
+                  <span style="background: #d64949;"></span>
+                  <a class="arrow-right"
+                    ><i class="fas fa-chevron-right"></i
+                  ></a>
+                </div>
+
+                <div class="lights d-flex align-items-center">
+                  <span style="background: #fff;"></span>
+                  <span style="background: #e3e3e3;"></span>
+                  <span style="background: #c6c6c6;"></span>
+                  <span style="background: #aaaaaa;"></span>
+                  <span style="background: #8d8d8d;"></span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- 2nd box - sufit -->
-        <div class="col-4">
-          <div id="box-2" class="box position-relative">
-            <!-- ON / OFF button -->
-            <a
-              class="on button rounded-pill d-flex align-items-center justify-content-between position-absolute"
-            >
-              <div class="rounded-circle on-off-control"></div>
-              <p>ON</p>
-            </a>
-            <div class="box-content d-flex flex-column align-items-center">
-              <img
-                class="lightbulb"
-                src="assets/images/lightbulb.png"
-                alt="lightbulb"
-                aria-hidden="true"
-              />
-              <p class="text-uppercase box-title">Halogeny</p>
+          <!-- 3rd box - halogeny -->
+          <div class="col-4">
+            <div id="box-3" class="box position-relative halogeny">
+              <!-- ON / OFF button -->
+              <a
+                class="off button rounded-pill d-flex align-items-center justify-content-between position-absolute"
+              >
+                <div class="rounded-circle on-off-control"></div>
+                <p>OFF</p>
+              </a>
 
-              <div class="lights d-flex align-items-center">
-                <a class="arrow-left"><i class="fas fa-chevron-left"></i></a>
-                <span style="background: #71da80;"></span>
-                <span style="background: #71dad4;"></span>
-                <span style="background: #7187da;"></span>
-                <span style="background: #a071da;"></span>
-                <span style="background: #da71d1;"></span>
-                <span style="background: #da7176;"></span>
-                <span style="background: #d64949;"></span>
-                <a class="arrow-right"><i class="fas fa-chevron-right"></i></a>
-              </div>
+              <div class="box-content d-flex flex-column align-items-center">
+                <img
+                  class="lightbulb"
+                  src="assets/images/lightbulb.png"
+                  alt="lightbulb"
+                  aria-hidden="true"
+                />
+                <p class="text-uppercase box-title">Sufit</p>
 
-              <div class="lights d-flex align-items-center">
-                <span style="background: #fff;"></span>
-                <span style="background: #e3e3e3;"></span>
-                <span style="background: #c6c6c6;"></span>
-                <span style="background: #aaaaaa;"></span>
-                <span style="background: #8d8d8d;"></span>
+                <div class="lights">
+                  <span style="background: #fff;"></span>
+                  <span style="background: #e3e3e3;"></span>
+                  <span style="background: #c6c6c6;"></span>
+                  <span style="background: #aaaaaa;"></span>
+                  <span style="background: #8d8d8d;"></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- 3rd box - halogeny -->
-        <div class="col-4">
-          <div id="box-3" class="box position-relative halogeny">
-            <!-- ON / OFF button -->
-            <a
-              class="off button rounded-pill d-flex align-items-center justify-content-between position-absolute"
-            >
-              <div class="rounded-circle on-off-control"></div>
-              <p>OFF</p>
-            </a>
-
-            <div class="box-content d-flex flex-column align-items-center">
-              <img
-                class="lightbulb"
-                src="assets/images/lightbulb.png"
-                alt="lightbulb"
-                aria-hidden="true"
-              />
-              <p class="text-uppercase box-title">Sufit</p>
-
-              <div class="lights">
-                <span style="background: #fff;"></span>
-                <span style="background: #e3e3e3;"></span>
-                <span style="background: #c6c6c6;"></span>
-                <span style="background: #aaaaaa;"></span>
-                <span style="background: #8d8d8d;"></span>
+          <!-- 4th box - add device -->
+          <div class="col-4">
+            <div id="box-4" class="box position-relative add-device">
+              <div
+                class="box-content d-flex flex-column align-items-center justify-content-center"
+              >
+                <a><img src="./assets/images/plus.png" /></a>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4th box - add device -->
-        <div class="col-4">
-          <div id="box-4" class="box position-relative add-device">
-            <div
-              class="box-content d-flex flex-column align-items-center justify-content-center"
-            >
-              <a><img src="./assets/images/plus.png" /></a>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <a href="login.html" style="position: absolute; bottom: 50px; right: 50px;"
-      >Przejdź do logowania..</a
-    >
+      <a
+        href="login.html"
+        style="position: absolute; bottom: 50px; right: 50px; z-index: 3000;"
+        >Przejdź do logowania..</a
+      >
+    </div>
   </body>
 </html>

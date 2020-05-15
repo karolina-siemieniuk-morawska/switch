@@ -225,7 +225,11 @@
 
   .logo {
     transform: scale(0.85);
-    margin-top: 5px;
+    margin-top: 10px;
+  }
+
+  .navigation {
+    margin: 20px 0;
   }
 
   #box-1 > * {

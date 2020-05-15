@@ -145,7 +145,6 @@
 
 .lights {
   margin-bottom: 7px;
-  /* max-width: 100%; */
 }
 
 .lights .fas {
@@ -216,7 +215,7 @@
 /* For low-resolution desktops */
 @media screen and (max-width: 1400px) {
   .wrapper {
-    background-position: fixed;
+    background-attachment: fixed;
   }
 
   .container {
@@ -226,6 +225,7 @@
 
   .logo {
     transform: scale(0.85);
+    margin-top: 5px;
   }
 
   #box-1 > * {

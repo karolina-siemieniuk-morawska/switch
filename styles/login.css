@@ -111,7 +111,7 @@ button {
   color: #46c3e1;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .logo {
     transform: scale(0.75);
     margin-left: -20px;

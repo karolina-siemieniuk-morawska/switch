@@ -1,6 +1,7 @@
 const login = document.querySelector(".login-menu");
+const hamburger = document.querySelector(".button_active_menu");
 
-document.querySelector(".button_active_menu").addEventListener("click", (e) => {
-  e.target.classList.toggle("active");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
   login.toggleAttribute("hidden");
 });

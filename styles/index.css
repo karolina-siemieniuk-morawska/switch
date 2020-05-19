@@ -298,3 +298,191 @@
     height: 10px;
   }
 }
+
+@media (max-width: 800px) {
+  * {
+  }
+
+  .wrapper {
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  /* --- Logo --- */
+
+  .logo {
+    height: 7vh;
+    margin-top: 10px;
+  }
+
+  /*  --- Hamburger menu --- */
+  .hamburger {
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .button_active_menu {
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    z-index: 100;
+    top: 15px;
+    left: 4%;
+    margin: 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    display: block;
+  }
+
+  .button_active_menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #717171;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+
+  .button_active_menu span:nth-child(1) {
+    top: 3px;
+  }
+
+  .button_active_menu span:nth-child(2),
+  .button_active_menu span:nth-child(3) {
+    top: 15px;
+  }
+
+  .button_active_menu span:nth-child(4) {
+    top: 28px;
+  }
+
+  .button_active_menu.active span:nth-child(1) {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+    background: #282828;
+  }
+
+  .button_active_menu.active span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .button_active_menu.active span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .button_active_menu.active span:nth-child(4) {
+    top: 15px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .container {
+    max-width: 100vw;
+    margin-right: 0;
+  }
+
+  .dashboard {
+    flex-wrap: wrap;
+    width: 55vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    overflow: scroll !important;
+  }
+
+  .col-4 {
+    min-width: 55vw;
+    padding: 0;
+  }
+  .box {
+    min-width: 55vw;
+  }
+
+  nav {
+    display: none !important;
+  }
+
+  .login-menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+    background-color: rgb(235, 235, 235);
+  }
+
+  .login-menu > a {
+    color: #4b4a4a;
+    text-decoration: none;
+    font-size: 10vw;
+  }
+
+  #box-1 > * {
+    padding: 10vw;
+  }
+
+  .measurements-box span {
+    font-size: 7vw;
+  }
+
+  .measurements-box p {
+    font-size: 3vw;
+  }
+
+  .data {
+    width: initial;
+    margin-left: 0;
+  }
+
+  .river + .data {
+    margin-right: 10px;
+  }
+
+  .lightbulb {
+    height: 50px;
+  }
+
+  .box-title {
+    font-size: 14px;
+    padding-bottom: 7px;
+  }
+
+  .lightbulb {
+    height: 13vw;
+  }
+
+  .box-title {
+    font-size: 5vw;
+  }
+
+  .lights span {
+    width: 5vw;
+    height: 5vw;
+    margin: 0.5vw;
+  }
+}

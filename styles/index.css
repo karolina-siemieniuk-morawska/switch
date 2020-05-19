@@ -409,8 +409,7 @@
   .dashboard {
     flex-wrap: wrap;
     width: 55vw;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 50px auto;
     overflow: scroll !important;
   }
 
